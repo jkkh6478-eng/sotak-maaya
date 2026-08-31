@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+  <title>صوتك معايا</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <main class="app">
+
+    <!-- HEADER -->
+    <header class="topbar">
+      <button class="icon-btn" id="soundBtn" aria-label="الصوت">
+        🔊
+      </button>
+
+      <div class="brand">
+        <span class="brand-dot"></span>
+        صوتك معايا
+      </div>
+
+      <button class="icon-btn" id="infoBtn" aria-label="معلومات">
+        ⋮
+      </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="eyebrow">
+        <span></span>
+        لحظة صغيرة... بس ليها صوت
+      </div>
+
+      <h1>
+        صوتك<br>
+        <strong>معايا</strong>
+      </h1>
+
+      <p>
+        اختار اللحظة اللي نفسك تسمعها،
+        وسيب الصوت يحكي الباقي.
+      </p>
+
+    </section>
+
+    <!-- PLAYER -->
+    <section class="player-card">
+
+      <div class="record-area">
+
+        <div class="pulse pulse-one"></div>
+        <div class="pulse pulse-two"></div>
+
+        <button class="play-btn" id="playBtn">
+          <span id="playIcon">▶</span>
+        </button>
+
+        <div class="playing-label" id="playingLabel">
+          جاهز؟
+        </div>
+
+      </div>
+
+      <div class="wave" id="wave"></div>
+
+      <div class="track-info">
+        <div>
+          <small>المقطع الحالي</small>
+          <h2 id="trackTitle">لحظة معايا</h2>
+        </div>
+
+        <span id="time">00:00</span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+    </section>
+
+    <!-- VOICES -->
+    <section class="section">
+
+      <div class="section-title">
+        <div>
+          <span>اختار إحساسك</span>
+          <h2>أصواتي</h2>
+        </div>
+
+        <span class="count">04</span>
+      </div>
+
+      <div class="voice-list">
+
+        <button class="voice-card active" data-title="لحظة معايا" data-type="love">
+          <span class="voice-icon">❤️</span>
+
+          <span class="voice-text">
+            <strong>لحظة معايا</strong>
+            <small>صوت دافي وقريب</small>
+          </span>
+
+          <span class="voice-arrow">‹</span>
+        </button>
+
+        <button class="voice-card" data-title="وحشتيني" data-type="miss">
+          <span class="voice-icon">🌙</span>
+
+          <span class="voice-text">
+            <strong>وحشتيني</strong>
+            <small>لما الكلام مش بيكفي</small>
+          </span>
+
+          <span class="voice-arrow">‹</span>
+        </button>
+
+        <button class="voice-card" data-title="صباحك" data-type="morning">
+          <span class="voice-icon">☀️</span>
+
+          <span class="voice-text">
+            <strong>صباحك</strong>
+            <small>بداية يوم مختلفة</small>
+          </span>
+
+          <span class="voice-arrow">‹</span>
+        </button>
+
+        <button class="voice-card" data-title="تصبحي على خير" data-type="night">
+          <span class="voice-icon">✨</span>
+
+          <span class="voice-text">
+            <strong>تصبحي على خير</strong>
+            <small>آخر صوت قبل النوم</small>
+          </span>
+
+          <span class="voice-arrow">‹</span>
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- MESSAGE -->
+    <section class="message-card">
+
+      <span class="quote">“</span>
+
+      <p id="message">
+        بعض الأصوات مش بتتسمع...
+        <br>
+        بعض الأصوات بتتحس.
+      </p>
+
+      <span class="message-line"></span>
+
+      <small>صوتك معايا</small>
+
+    </section>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+
+      <button class="nav-item active">
+        <span>⌂</span>
+        <small>الرئيسية</small>
+      </button>
+
+      <button class="nav-item" id="heartNav">
+        <span>♡</span>
+        <small>المفضلة</small>
+      </button>
+
+      <button class="nav-item">
+        <span>◉</span>
+        <small>ذكريات</small>
+      </button>
+
+      <button class="nav-item">
+        <span>☰</span>
+        <small>المزيد</small>
+      </button>
+
+    </nav>
+
+  </main>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span>♥</span>
+    <p id="toastText">تم اختيار الصوت</p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+                       </html>
